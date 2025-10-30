@@ -59,7 +59,7 @@ bcsB=(bc_B_L)
 bcs=(bcsU,bc_B_L,bc_w,bc_J,bc_E)
 
 """ """
-dt=0.01; g=1e+1; eta=5e-6; R_h=1e-4; nu=1e-3
+dt=0.001; g=1e+1; eta=3e-6; R_h=5e-1; nu=1e-3; S=1
 n=FacetNormal(mesh)
 
 
@@ -87,14 +87,15 @@ def weak_form_NSB(u,B,p,w,J,E,v,C,q,z,K,F,dt,u_old,B_old,g):
 
   a= +1/dt*inner(u,v)*dx\
     +inner(w_vec,v)*dx\
-    +nu*inner(grad(u),grad(v))*dx\
     +g*div(u)*div(v)*dx\
-    -5*inner(j_vec, v)*dx\
+    +nu*inner(grad(u),grad(v))*dx\
+    -S*inner(j_vec, v)*dx\
     -p*div(v)*dx\
     +1/dt*dot(B, C)*dx\
     +dot(curl(E), C)*dx\
     +g*div(B)*div(C)*dx\
     +1/Re_m*div(B)*div(C)*dx\
+    -R_h*dot(j_vec,C)*dx\
     -q*div(u)*dx\
     +inner(w, z)*dx\
     -inner(u, curl(z))*dx\
@@ -102,9 +103,7 @@ def weak_form_NSB(u,B,p,w,J,E,v,C,q,z,K,F,dt,u_old,B_old,g):
     -inner(B, curl(K))*dx\
     +inner(E, F)*dx\
     +(u[0]*B_old[1] - u[1]*B_old[0])* F*dx\
-    -1/Re_m*(J*F)*dx\
-    -R_h*(-J*B[1])*F*dx\
-    -R_h*(J*B[0])*F*dx\
+    
 
 
   L=1/dt*dot(u_old,v)*dx\
@@ -115,13 +114,17 @@ def weak_form_NSB(u,B,p,w,J,E,v,C,q,z,K,F,dt,u_old,B_old,g):
   return a,L
 
 """
-
-
++nu*inner(grad(u),grad(v))*dx\              #diffusion CG
+-inner(avg(nu*grad(u)),jump(outer(v, n)))*dS\
+-inner(jump(nu*grad(u),n),avg(v))*dS\
 """
 
+"""
+-1/Re_m*(J*F)*dx\
+"""
 
 """
-+g*rot(u)*rot(v)*dx\     #for velocity diffusion
++g*rot(u)*rot(v)*dx\     #for velocity diffusion DG
 +g*div(u)*div(v)*dx\
 +Rh*rot(B)*rot(C)*dx\     #for magnetic field diffusion
 +Rh*div(B)*div(C)*dx\
@@ -141,7 +144,7 @@ Hall's Term in components
 #Check Dimension
 j = as_matrix([[0, -1],
                [1,  0]])
-#check_dimensions(cross(J,F), 1)
+#check_dimensions(cross(Jh,Bh), 1)
 # %%
 u,B,p,w,J,E=TrialFunctions(W)
 v,C,q,z,K,F=TestFunctions(W)
