@@ -11,6 +11,10 @@ Choosing the right conforming DeRham complex, compatible spaces this solver was 
 https://github.com/user-attachments/assets/348ec988-5479-4296-a5ac-901d04263663
 
 
+
+https://github.com/user-attachments/assets/ef9d8c3a-c304-4be0-87a2-dbae2f74b8da
+
+
 https://github.com/user-attachments/assets/09173d8d-58f5-47a7-bdc3-b72a73e8f650
 
 
