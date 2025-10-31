@@ -6,7 +6,14 @@ needed to relax the stiffness of the monolithic problem (two-way coupled). Then 
 1. Install ```Firedrake``` locally from [here](https://www.firedrakeproject.org/) or run it in ```GoogleColab``` attaining to the [following](https://github.com/firedrakeproject/firedrake/discussions/3302) procedure
 2. Code can be run in parallel    ```$ mpiexec -n 10 python First_test.py```, through local installation
 3. Advised mesh resolution ```128 x 128```
-
+4. Choosing your finite element space combination depends on the boundary conditions you want to solve for
+   
+### TO DO:
+1. Implement the compressibility i.e. a transport equation for the density that won't be constant anymore
+2. Possible coupling with other physics, like the Temperature and diffusion-reaction-transport of species
+3. To precondition the fluid and magnetic blocks separately, enhancing the possible parameters' range for which the solver would be suited to "solve-for"
+   
+# Some Incompressible extracts
 Choosing the right conforming DeRham complex, compatible spaces, this solver was able to reproduce the classical lid-driven  cavity problem. Some extracts (segmentations of the magnetic field are due to N1curl, Raviart-Thomas finite elements that are discontinuous by construction):
 
 https://github.com/user-attachments/assets/348ec988-5479-4296-a5ac-901d04263663
