@@ -11,7 +11,7 @@ needed to relax the stiffness of the monolithic problem (two-way coupled). Then 
 ### TO DO:
 1. Implement the compressibility i.e. a transport equation for the density that won't be constant anymore
 2. Possible coupling with other physics, like the Temperature and diffusion-reaction-transport of species
-3. To precondition the fluid and magnetic blocks separately, enhancing the possible parameters' range for which the solver would be suited to "solve-for"
+3. To precondition the fluid and magnetic blocks separately, enhancing the possible parameters' range for which the solver would be suited to "solve-for" and errors
    
 # Some extracts from the incompressible formulation 
 <img width="883" height="369" alt="image" src="https://github.com/user-attachments/assets/930d55f6-8b83-496a-8ef2-6fdf0bdcf179" />
