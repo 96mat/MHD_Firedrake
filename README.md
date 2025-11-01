@@ -14,7 +14,8 @@ needed to relax the stiffness of the monolithic problem (two-way coupled). Then 
 3. To precondition the fluid and magnetic blocks separately, enhancing the possible parameters' range for which the solver would be suited to "solve-for"
    
 # Some Incompressible extracts
-<img width="890" height="364" alt="image" src="https://github.com/user-attachments/assets/2b7625c1-8a18-464b-956e-f82ab500efbd" />
+<img width="883" height="369" alt="image" src="https://github.com/user-attachments/assets/930d55f6-8b83-496a-8ef2-6fdf0bdcf179" />
+
 
 Choosing the right conforming DeRham complex, compatible spaces, this solver was able to reproduce the classical lid-driven  cavity problem. Some extracts (segmentations of the magnetic field are due to N1curl, Raviart-Thomas finite elements that are discontinuous by construction):
 
