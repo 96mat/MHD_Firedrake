@@ -17,7 +17,7 @@ needed to relax the stiffness of the monolithic problem (two-way coupled). Then 
 <img width="883" height="369" alt="image" src="https://github.com/user-attachments/assets/930d55f6-8b83-496a-8ef2-6fdf0bdcf179" />
 
 
-Choosing the right conforming DeRham complex, compatible spaces, this solver was able to reproduce the classical lid-driven  cavity problem. Some extracts (segmentations of the magnetic field are due to N1curl, Raviart-Thomas finite elements that are discontinuous by construction):
+Choosing the right conforming DeRham complex, compatible spaces, this solver was able to preserve $\nabla\cdot\boldsymbol{B}$ and reproduce the classical lid-driven cavity problem. Some extracts (segmentations of the magnetic field are due to N1curl, Raviart-Thomas finite elements that are discontinuous by construction):
 
 https://github.com/user-attachments/assets/348ec988-5479-4296-a5ac-901d04263663
 
