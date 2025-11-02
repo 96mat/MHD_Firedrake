@@ -9,9 +9,10 @@ needed to relax the stiffness of the monolithic problem (two-way coupled). Then 
 4. Choosing your finite element space combination depends on the boundary conditions you want to solve for
    
 ### TO DO:
-1. Implement the compressibility i.e. a transport equation for the density that won't be constant anymore
-2. Possible coupling with other physics, like the Temperature and diffusion-reaction-transport of species
-3. To precondition the fluid and magnetic blocks separately, enhancing the possible parameters' range for which the solver would be suited to "solve-for" and errors
+1. Implement the compressibility i.e. a transport equation for the density that won't be constant anymore :negative_squared_cross_mark:
+2. Possible coupling with other physics, like the Temperature and diffusion-reaction-transport of species :negative_squared_cross_mark:
+3. To precondition the fluid and magnetic blocks separately, enhancing the possible parameters' range for which the solver would be suited to "solve-for" and errors :white_check_mark:
+4. Solve the problem in its Fully-Non-Linear statement :white_check_mark:
    
 # Some extracts from the incompressible formulation 
 <img width="883" height="369" alt="image" src="https://github.com/user-attachments/assets/930d55f6-8b83-496a-8ef2-6fdf0bdcf179" />
