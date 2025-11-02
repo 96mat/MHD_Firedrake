@@ -1,6 +1,6 @@
 # Incompressible/Compressible MHD Solver: Resistive and Hall preserving both divB and divU
 
-An MHD solver based on [[1]](https://arxiv.org/pdf/2012.04122) and then stabilised using an augmented lagrangian term [[2]](https://arxiv.org/pdf/1706.02648) and small diffusive terms
+A 2D MHD solver based on [[1]](https://arxiv.org/pdf/2012.04122) and then stabilised using an augmented lagrangian term [[2]](https://arxiv.org/pdf/1706.02648) and small diffusive terms
 needed to relax the stiffness of the monolithic problem (two-way coupled). Then an addition of the Hall's term
 
 1. Install ```Firedrake``` locally from [here](https://www.firedrakeproject.org/) or run it in ```GoogleColab``` attaining to the [following](https://github.com/firedrakeproject/firedrake/discussions/3302) procedure
