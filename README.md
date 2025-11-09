@@ -19,7 +19,7 @@ needed to relax the stiffness of the monolithic problem (two-way coupled). Then 
 
 
 Choosing the right conforming DeRham complex, compatible spaces, together with the augmented Lagrangian term, this solver was able to preserve $\nabla\cdot\boldsymbol{B}$ and reproduce the classical lid-driven cavity problem. Some extracts (segmentations of the magnetic field are due to N1curl, Raviart-Thomas finite elements that are discontinuous by construction):
-## :one: $H^1(\Omega)/H^1(curl;\Omega)$ and $H^1(div;\Omega)/H^1(div;\Omega)$
+## :one: $H^1(\Omega)/H^1(curl;\Omega)$ and $H^1(div;\Omega)/H^1(div;\Omega)$ and MHD: only Resistive
 https://github.com/user-attachments/assets/348ec988-5479-4296-a5ac-901d04263663
 
 
@@ -28,7 +28,7 @@ https://github.com/user-attachments/assets/ef9d8c3a-c304-4be0-87a2-dbae2f74b8da
 
 https://github.com/user-attachments/assets/09173d8d-58f5-47a7-bdc3-b72a73e8f650
 
-## :two: $H^1(div;\Omega)/H^1(curl;\Omega)$ compatible spaces
+## :two: $H^1(div;\Omega)/H^1(curl;\Omega)$ compatible spaces and MHD: comprising the Hall's Term
 Here, employing the fully DeRham complex, i.e. H-div and H-curl combo, allows us to preserve $\nabla\cdot B$ and $\nabla\cdot u$ up to machine precision
 
 https://github.com/user-attachments/assets/3ae82276-631a-43b7-bf8a-7504473aa9e8
