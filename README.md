@@ -38,3 +38,9 @@ https://github.com/user-attachments/assets/3ae82276-631a-43b7-bf8a-7504473aa9e8
 
 https://github.com/user-attachments/assets/d2acd7eb-20a6-4e7d-8b5b-a8bdf42eae42
 
+The div-free cavity lid problem in RT/Nedèlec finite elements
+
+
+
+https://github.com/user-attachments/assets/77c0fffc-a954-4662-b662-58d4f872b223
+
