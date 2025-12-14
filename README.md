@@ -46,4 +46,8 @@ The div-free cavity lid problem in RT/Nedèlec finite elements, at $Re=1$
 
 
 https://github.com/user-attachments/assets/77c0fffc-a954-4662-b662-58d4f872b223
+# SHRED Architecture for MHD 
+## :one: MHD fields reconstruction
+Placing some random sensors the SHRED architecture has been able to reconstruct and later on forecast the dynamics of three fields (at once) for an MHD physical system
+<img width="1123" height="794" alt="MHD-SHRED" src="https://github.com/user-attachments/assets/51fd9a45-9d12-4be2-ad2f-ba425087866d" />
 
